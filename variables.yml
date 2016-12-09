@@ -1,0 +1,37 @@
+homebrew_cask_package_names:
+  - atom
+  - atom-beta
+  - dropbox
+  - google-chrome
+  - google-japanese-ime
+  - gyazo
+  - iterm2
+  - sequel-pro
+  - spectacle
+  - slack
+  - vagrant
+  - virtualbox
+homebrew_package_names:
+  - caskroom/cask/brew-cask
+  - cmake
+  - fzf
+  - gnu-sed
+  - hub
+  - icu4c
+  - imagemagick
+  - jq
+  - motemen/ghq/ghq
+  - mysql
+  - node
+  - neovim
+  - openssl
+  - peco
+  - readline
+  - reattach-to-user-namespace
+  - redis
+  - ruby-build
+  - tig
+  - tmux
+  - tree
+  - vim
+  - zsh

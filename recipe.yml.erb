@@ -1,0 +1,29 @@
+resources:
+  - type: command
+    script: brew update
+<%- homebrew_package_names.each do |homebrew_package_name| -%>
+  - type: homebrew_package
+    name: <%= homebrew_package_name %>
+<%- end -%>
+<%- homebrew_cask_package_names.each do |homebrew_cask_package_name| -%>
+  - type: homebrew_cask_package
+    name: <%= homebrew_cask_package_name %>
+<%- end -%>
+<%- atom_package_names.each do |atom_package_name| -%>
+  - type: atom_package
+    name: <%= atom_package_name %>
+<%- end -%>
+  - type: git
+    repository: https://github.com/riywo/anyenv.git
+    path: /Users/<%= ENV["USER"] %>/dotfiles/ext/anyenv
+    status: updated
+  - type: defaults
+    domain: com.apple.dock
+    key: autohide
+    value: 1
+    notify:
+      - restart_dock
+handlers:
+  - id: restart_dock
+    type: command
+    script: killall Dock
